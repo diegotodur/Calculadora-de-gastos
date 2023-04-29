@@ -12,6 +12,11 @@
 	<link rel="shortcut icon" href="./SRC/IMG/calculadora.png" type="image/x-icon">
 	<script defer src="./SRC/JS/table2excel.js"></script>
     <script defer src="./SRC/JS/index.js"></script>
+	<script defer src="./SRC/JS/actualizarSaldo.js"></script>
+	<script defer src="./SRC/JS/agregarGasto.js"></script>
+	<script defer src="./SRC/JS/reset.js"></script>
+	<script defer src="./SRC/JS/borrarGasto.js"></script>
+
 	<title>Calculadora</title>
 	
 </head>
@@ -33,7 +38,7 @@
 				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 					<h3 class="textos" style="text-align: center;">Presupuesto</h3>
 					<hr>
-					<table class="tabla table table-hover">
+					<table id="table1" class="table table-hover">
 						<tr>
 						  <th>Ingresos</th>
 						  <th>Gastos</th>
@@ -65,7 +70,7 @@
 				<div class="textos">
 					<h3>Excel</h3>
                     <img src="./SRC/IMG/excelbw.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;"> <br> <br> <br>
-					<button id="descargardata" class="btn btn-secondary">Descargar</button>
+					<button id="descargardata" onclick="descargarExcel()" class="btn btn-secondary">Descargar</button>
 					
 				</div>
 			</div>
@@ -74,7 +79,7 @@
 				<div class="textos listagastos card shadow-sm p-3 mb-5" style="background-color: #dbdcde">
 					<h3 style="text-align: center;" class="textos">Lista</h3>
 					<hr>
-					<table class="tablaejemplo table table-hover">
+					<table id="table2" class="table table-hover">
 						<tr>
 						  <th>Gasto</th>
 						  <th>Valor</th>
@@ -167,6 +172,10 @@
           </ul>
         </div>
       </footer>
+    
 
+	<script>
+		
+	</script>
 </body>
 </html>
