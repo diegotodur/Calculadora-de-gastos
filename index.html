@@ -15,18 +15,25 @@
 </head>
 <body >
   
-  	<nav class="menu">
-		<div>
-			<h1 class="textos contenedor"><img src="./SRC/IMG/calculadora.png" alt="img" width="45px"> CALCULADORA</h1>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+		  <h3 class="textos titulo"><img src="./SRC/IMG/calculadora.png" alt="img" height="30px"> Calculadora</h3>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-secondary" type="submit">Search</button>
+			</form>
+		  </div>
 		</div>
-	</nav>
+	  </nav>
+	  
+
 	<div class="contenedor fw-semibold">
 		<div class="tarjetas">
 			<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				
 				<div class="textos">
 					<h3>Ingresa Presupuesto</h3>
-					<form class="presupuesto">
+					<form id="presupuesto"class="presupuesto">
 						<label for="presupuesto"></label> <br>
 						<input class="ingresos" type="number" placeholder="$999.999"> <br>
 						<button type="button" class="btn btn-light">Actualizar</button>
@@ -36,8 +43,8 @@
 			</div>
 
 			<div  >
-				<div class="textos card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-					<h3 style="text-align: center;">Balance</h3>
+				<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<h3 class="textos" style="text-align: center;">Balance</h3>
 					<hr>
 					<table class="tabla table table-hover">
 						<tr>
@@ -61,10 +68,10 @@
 				<div class="textos">
 					<h3>Ingresa Gasto</h3>
 					<form class="ingresogastos">
-						<label for="nombre-gasto">Nombre:</label>
-						<input class="ingresos" type="text" id="nombre-gasto" placeholder="Credito Hipotecario"> <br>
-						<label for="cantidad-gasto">Cantidad:</label> 
-						<input class="ingresos" type="number" id="cantidad-gasto" placeholder="$999.999"> <br>
+						<label for="nombre-gasto"></label>
+						<input class="ingresos" type="text" id="nombre-gasto" placeholder="Nombre"> <br>
+						<label for="cantidad-gasto"></label> 
+						<input class="ingresos" type="number" id="cantidad-gasto" placeholder="Monto"> <br>
 						<button type="button" class="btn btn-light">Agregar</button> <br>
 					  </form>
 				</div>
@@ -72,7 +79,7 @@
 
 			<div >
 				<div class="textos listagastos card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde">
-					<h3 style="text-align: center;">Lista Gastos</h3>
+					<h3 style="text-align: center;" class="textos">Lista Gastos</h3>
 					<hr>
 					<table class="tablaejemplo table table-hover">
 						<tr>

@@ -8,8 +8,7 @@
 
 
 .titulo {
-	font-size: 24px;
-	padding: 20px 0;
+	font-size: 22px;
 }
 
 .contenedor {
@@ -42,14 +41,16 @@
 .card .textos {
 	height: 100%;
   text-align:center;	
+  color: #6c757d;
 }
 
 .ingresos { 
     border: none;
-    background: hsl(0 0% 93%);
+    background: hsl(0, 0%, 100%);
     border-radius: .25rem;
     padding: .100rem 1rem;
-	margin: 20px;
+  	margin: 20px;
+    width: 200px;
 }
 
 .listagastos{
@@ -63,9 +64,6 @@ hr {
 	border-color: rgb(255, 255, 255);
 }
 
-.menu {
-	text-align:center;
-}
 
 .botonborrar {
   cursor: pointer;
@@ -77,7 +75,7 @@ hr {
   width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
   margin-left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 6%;
+  margin-bottom: 4%;
 }
 
 
