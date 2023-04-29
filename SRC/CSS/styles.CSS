@@ -9,13 +9,14 @@
 
 .titulo {
 	font-size: 22px;
+  color: #6c757d;
 }
 
 .contenedor {
 	width: 90%;
 	max-width: 1200px;
 	margin: auto;
-  padding: 40px 0;
+  padding: 40px ;
   font-size: 15px;
 }
 
@@ -78,6 +79,10 @@ hr {
   margin-bottom: 4%;
 }
 
+.table td,
+.table th {
+  color: #6c757d;
+}
 
 /* FOOTER CSS */ 
 
