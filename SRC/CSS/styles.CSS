@@ -2,30 +2,29 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
  font-family: 'Ubuntu', sans-serif;
 }
-.container-fluid{
-  text-align:center;
-  padding-top: 15px;
-}
-.titulo {
-	font-size: 22px;
-  color: #6c757d;
-}
+
 
 .contenedor {
 	width: 90%;
 	max-width: 1200px;
 	margin: auto;
-  padding: 40px ;
+  padding: 30px ;
+  padding-bottom: 0px;
   font-size: 15px;
+  display: grid;
+justify-content: center;
 }
 
 .tarjetas {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 15px;
+  border-radius: 12px;
+  width: 1000px;
+  max-width: 1000px;
+  text-align: center;
 
 }
 
@@ -37,8 +36,7 @@
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
-
-	
+  
 }
 
 .card .textos {
@@ -48,12 +46,15 @@
 }
 
 .ingresos { 
-    border: none;
-    background: hsl(0, 0%, 100%);
-    border-radius: .25rem;
+    border: 0.5px solid #ffffff;
+    outline: none;
+    background-color: #eeecec;
+    color: #6c757d;
+    border-radius: 5px;
     padding: .100rem 1rem;
   	margin: 20px;
     width: 200px;
+
 }
 
 .listagastos{
@@ -67,26 +68,29 @@ hr {
 	border-color: rgb(255, 255, 255);
 }
 
-
 .botonborrar {
   cursor: pointer;
   background-color: transparent;
   border: none;
 }
 
-#descargardata {
+#botonesfinales{
+  justify-content: center;
   width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
   margin-left: 50%;
   transform: translateX(-50%);
   margin-bottom: 4%;
-  padding: 2px;
+  padding: 1px;
+}
+
+.btn.btn-secondary{
+  font-size: 13px;
 }
 
 .table td,
 .table th {
   color: #6c757d;
 }
-
 
 
 /* FOOTER CSS */ 
@@ -147,3 +151,44 @@ ul {
   }
   
 
+/* BUTTON TRASH ANIMATION CSS */ 
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5px, 0);
+  }
+  20% {
+    transform: translate(5px, 0);
+  }
+  30% {
+    transform: translate(-5px, 0);
+  }
+  40% {
+    transform: translate(5px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  60% {
+    transform: translate(5px, 0);
+  }
+  70% {
+    transform: translate(-5px, 0);
+  }
+  80% {
+    transform: translate(5px, 0);
+  }
+  90% {
+    transform: translate(-5x, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.vibrar:focus {
+  animation: shake 1s;
+}

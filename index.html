@@ -12,41 +12,30 @@
 	<link rel="shortcut icon" href="./SRC/IMG/calculadora.png" type="image/x-icon">
 	<script defer src="./SRC/JS/table2excel.js"></script>
     <script defer src="./SRC/JS/index.js"></script>
-	<title>Presupuesto</title>
+	<title>Calculadora</title>
 	
 </head>
 <body >
-  
-	<nav>
-		<div class="container-fluid">
-		  <h3 class="titulo"><img src="./SRC/IMG/calculadora.png" alt="img" height="30px"> Calculadora</h3>
-		  </div>
-		</div>
-	  </nav>
-	  
-
 	<div class="contenedor fw-semibold">
 		<div class="tarjetas">
-			<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-				
+			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
-					<h3>Ingresa Presupuesto</h3>
+					<h3>Ingresos</h3>
 					<form id="presupuesto"class="presupuesto">
-						<label for="presupuesto"></label> <br>
-						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos"> <br>
-						<button type="button" class="btn btn-light" id="botonactualizar">Actualizar</button>
+						<label id = "ingresoslabel" for="presupuesto"></label> <br>
+						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''"> <br>
+						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
 					</form>
 				</div>
-
 			</div>
 
-			<div  >
-				<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-					<h3 class="textos" style="text-align: center;">Balance</h3>
+			<div>
+				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<h3 class="textos" style="text-align: center;">Presupuesto</h3>
 					<hr>
 					<table class="tabla table table-hover">
 						<tr>
-						  <th>Presupuesto</th>
+						  <th>Ingresos</th>
 						  <th>Gastos</th>
 						  <th>Saldo</th> 
 						</tr>
@@ -55,29 +44,35 @@
 						  <td id="gastos-actuales">$0</td>
 						  <td id="saldo-actual">$0</td>
 						</tr>
-						
-
-					  </table>
-					 
+					</table> 
 				</div>
 			</div>
 
-			<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
-					<h3>Ingresa Gasto</h3>
+					<h3>Gastos</h3>
 					<form class="ingresogastos">
-						<label for="nombre-gasto"></label>
-						<input class="ingresos" type="text" id="nombre-gasto" placeholder="Nombre"> <br>
-						<label for="cantidad-gasto"></label> 
-						<input class="ingresos" type="number" id="cantidad-gasto" placeholder="Monto"> <br>
-						<button type="button" class="btn btn-light">Agregar</button> <br>
+						<label id = "ingresoslabel" for="nombre-gasto"></label>
+						<input class="ingresos" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''"> <br>
+						<label id = "ingresoslabel" for="monto-gasto"></label> 
+						<input class="ingresos" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''"> <br>
+						<button type="button" class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
 					  </form>
 				</div>
 			</div>
 
+			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+				<div class="textos">
+					<h3>Excel</h3>
+                    <img src="./SRC/IMG/excel.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;"> <br>
+					<button id="descargardata" class="btn btn-secondary">Descargar</button>
+					
+				</div>
+			</div>
+
 			<div >
-				<div class="textos listagastos card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde">
-					<h3 style="text-align: center;" class="textos">Lista Gastos</h3>
+				<div class="textos listagastos card shadow-sm p-3 mb-5" style="background-color: #dbdcde">
+					<h3 style="text-align: center;" class="textos">Lista</h3>
 					<hr>
 					<table class="tablaejemplo table table-hover">
 						<tr>
@@ -88,69 +83,82 @@
 						<tr>
 							<td class="text-secondary" >Ejemplo</td>
 							<td class="text-secondary" >$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">🗑️</button></td>
+							<td><button class="botonborrar vibrar">🗑️</button></td>
 						</tr>
 						
 					  </table>
+				</div>
+			</div>
+
+			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+				<div class="textos">
+					<h3>Mayor Gasto</h3>
+					<form id="presupuesto"class="presupuesto">
+						<label id = "ingresoslabel" for="presupuesto"></label> <br>
+						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''"> <br>
+						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
+					</form>
 				</div>
 			</div>
 			
 		</div>
 	</div>
 
-	<div>
-		<button id="descargardata" class="btn btn-secondary">Descargar Excel</button>
+	<div id="botonesfinales">
+		<button id="reset" class="btn btn-secondary">Resetear</button>
+
 	</div>
+
 	<footer>
         <div class="footer ">
           <ul>
