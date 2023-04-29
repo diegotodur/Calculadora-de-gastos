@@ -20,10 +20,10 @@
 		<div class="tarjetas">
 			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
-					<h3>Ingresos</h3>
+					<h3>Ingresos</h3> <br>
 					<form id="presupuesto"class="presupuesto">
 						<label id = "ingresoslabel" for="presupuesto"></label> <br>
-						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''"> <br>
+						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''"> <br> <br> <br>
 						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
 					</form>
 				</div>
@@ -55,7 +55,7 @@
 						<label id = "ingresoslabel" for="nombre-gasto"></label>
 						<input class="ingresos" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''"> <br>
 						<label id = "ingresoslabel" for="monto-gasto"></label> 
-						<input class="ingresos" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''"> <br>
+						<input class="ingresos" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''"> <br> <br> 
 						<button type="button" class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
 					  </form>
 				</div>
@@ -64,7 +64,7 @@
 			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
 					<h3>Excel</h3>
-                    <img src="./SRC/IMG/excel.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;"> <br>
+                    <img src="./SRC/IMG/excelbw.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;"> <br> <br> <br>
 					<button id="descargardata" class="btn btn-secondary">Descargar</button>
 					
 				</div>
@@ -142,12 +142,9 @@
 
 			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
-					<h3>Mayor Gasto</h3>
-					<form id="presupuesto"class="presupuesto">
-						<label id = "ingresoslabel" for="presupuesto"></label> <br>
-						<input class="ingresos" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''"> <br>
-						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
-					</form>
+					<h3>Resetear</h3>
+					<img src="./SRC/IMG/documento.png" alt="reset" style="width: 100px; height: 100px; padding: 10px; margin: 10px;"> <br> <br> <br>
+					<button id="reset" class="btn btn-secondary">Resetear</button>
 				</div>
 			</div>
 			
@@ -155,7 +152,6 @@
 	</div>
 
 	<div id="botonesfinales">
-		<button id="reset" class="btn btn-secondary">Resetear</button>
 
 	</div>
 

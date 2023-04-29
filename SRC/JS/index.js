@@ -40,3 +40,9 @@ function agregarGasto (){
 let gastos = [
   {nombre_gasto:"asd" , monto_gasto:0}
 ]
+
+//FUNCION RECETEAR
+
+function resetear(){
+  
+}
