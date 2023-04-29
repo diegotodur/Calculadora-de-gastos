@@ -13,22 +13,22 @@
 	<title>Presupuesto</title>
 	
 </head>
-<body>
+<body >
   
   	<nav class="menu">
 		<div>
-			<h1 class="textos contenedor"><img src="./SRC/IMG/calculadora.png" alt="img" width="45px"> CALCULADORA PRESUPUESTARIA</h1>
+			<h1 class="textos contenedor"><img src="./SRC/IMG/calculadora.png" alt="img" width="45px"> CALCULADORA</h1>
 		</div>
 	</nav>
 	<div class="contenedor fw-semibold">
 		<div class="tarjetas">
-			<div class="card rounded-4 shadow p-3 mb-5 rounded" style="background-color: #bdbec2;">
+			<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				
 				<div class="textos">
 					<h3>Ingresa Presupuesto</h3>
 					<form class="presupuesto">
 						<label for="presupuesto"></label> <br>
-						<input class="ingresos" type="number"> <br>
+						<input class="ingresos" type="number" placeholder="$999.999"> <br>
 						<button type="button" class="btn btn-light">Actualizar</button>
 					</form>
 				</div>
@@ -36,8 +36,8 @@
 			</div>
 
 			<div  >
-				<div class="textos">
-					<h3>Balance</h3>
+				<div class="textos card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<h3 style="text-align: center;">Balance</h3>
 					<hr>
 					<table class="tabla table table-hover">
 						<tr>
@@ -57,22 +57,22 @@
 				</div>
 			</div>
 
-			<div class="card rounded-4 shadow p-3 mb-5 rounded" style="background-color: #bdbec2;">
+			<div class="card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
 				<div class="textos">
-					<h3>Ingresa Gastos</h3>
+					<h3>Ingresa Gasto</h3>
 					<form class="ingresogastos">
-						<label for="nombre-gasto">Nombre del gasto:</label> <br>
-						<input class="ingresos" type="text" id="nombre-gasto"> <br>
-						<label for="cantidad-gasto">Cantidad del gasto:</label> <br>
-						<input class="ingresos" type="number" id="cantidad-gasto"> <br>
+						<label for="nombre-gasto">Nombre:</label>
+						<input class="ingresos" type="text" id="nombre-gasto" placeholder="Credito Hipotecario"> <br>
+						<label for="cantidad-gasto">Cantidad:</label> 
+						<input class="ingresos" type="number" id="cantidad-gasto" placeholder="$999.999"> <br>
 						<button type="button" class="btn btn-light">Agregar</button> <br>
 					  </form>
 				</div>
 			</div>
 
 			<div >
-				<div class="textos listagastos">
-					<h3>Lista Gastos</h3>
+				<div class="textos listagastos card rounded-4 shadow-sm p-3 mb-5" style="background-color: #dbdcde">
+					<h3 style="text-align: center;">Lista Gastos</h3>
 					<hr>
 					<table class="tablaejemplo table table-hover">
 						<tr>
@@ -81,59 +81,59 @@
 						  <th>🗑️</th>
 						</tr>
 						<tr>
-							<td>Ejemplo</td>
-							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td >Ejemplo</td>
+							<td >$0</td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						<tr>
 							<td>Ejemplo</td>
 							<td>$0</td>
-							<td><button class="botonborrar">❌</button></td>
+							<td><button class="botonborrar">🗑️</button></td>
 						</tr>
 						
 					  </table>
@@ -144,7 +144,7 @@
 	</div>
 
 	<div>
-		<button id="descargardata" class="btn btn-light">Descargar Excel</button>
+		<button id="descargardata" class="btn btn-secondary">Descargar Excel</button>
 	</div>
 	<script src="./SRC/JS/table2excel.js"></script>
    <script src="./SRC/JS/index.js"></script>
