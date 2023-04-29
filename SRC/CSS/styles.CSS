@@ -5,8 +5,10 @@
   font-family: 'Roboto', sans-serif;
  font-family: 'Ubuntu', sans-serif;
 }
-
-
+.container-fluid{
+  text-align:center;
+  padding-top: 15px;
+}
 .titulo {
 	font-size: 22px;
   color: #6c757d;
@@ -77,12 +79,15 @@ hr {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-bottom: 4%;
+  padding: 2px;
 }
 
 .table td,
 .table th {
   color: #6c757d;
 }
+
+
 
 /* FOOTER CSS */ 
 
