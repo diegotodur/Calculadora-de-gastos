@@ -15,7 +15,6 @@
 	<script defer src="./SRC/JS/actualizarSaldo.js"></script>
 	<script defer src="./SRC/JS/agregarGasto.js"></script>
 	<script defer src="./SRC/JS/reset.js"></script>
-	<script defer src="./SRC/JS/borrarGasto.js"></script>
     <script defer src="./SRC/JS/numericos.js"></script>
 	<title>Calculadora</title>
 	
@@ -28,7 +27,7 @@
 					<h3>Ingresos</h3> <br>
 					<form id="presupuesto"class="presupuesto">
 						<label id = "ingresoslabel" for="presupuesto"></label> <br>
-						<input class="ingresos validarNumero" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''" oninput="validarNumeros()"> 
+						<input class="ingresos validarNumero" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''" oninput="validarNumeros()" required> 
 						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
 					</form>
 				</div>
@@ -58,10 +57,10 @@
 					<h3>Gastos</h3>
 					<form class="ingresogastos">
 						<label id = "ingresoslabel" for="nombre-gasto"></label>
-						<input class="ingresos" maxlength="10" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''"> <br>
+						<input class="ingresos" maxlength="10" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''" required> <br>
 						<label id = "ingresoslabel" for="monto-gasto"></label> 
-						<input class="ingresos validarNumero	" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''"> <br> <br> 
-						<button type="button" onclick="agregarFila()" class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
+						<input class="ingresos validarNumero	" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''" required> <br> <br> 
+						<button type="button"  class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
 					  </form>
 				</div>
 			</div>

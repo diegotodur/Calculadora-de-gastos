@@ -1,29 +1,31 @@
 // Función para añadir filas a la tabla de gastos
-function agregarFila() {
+const botonAgregar = document.getElementById('agregar_gasto');
+
+botonAgregar.addEventListener('click', function() {
   const nombre = document.getElementById("nombre_gasto").value;
   const monto = document.getElementById("monto_gasto").value;
 
-  const tabla = document.getElementById("table2");
-  const nuevaFila = tabla.insertRow(-1);
-
-  const columnaNombre = nuevaFila.insertCell(0);
-  columnaNombre.innerHTML = nombre;
-
-  const columnaMonto = nuevaFila.insertCell(1);
-  columnaMonto.innerHTML = monto;
-
-  const columnaBoton = nuevaFila.insertCell(2);
-  const boton = document.createElement("button");
-  boton.classList.add("botonborrar", "vibrar");
-  boton.innerHTML = "🗑️";
-  boton.onclick = function () {
-    tabla.deleteRow(nuevaFila.rowIndex);
+    const tabla = document.getElementById("table2");
+    const nuevaFila = tabla.insertRow(-1);
+  
+    const columnaNombre = nuevaFila.insertCell(0);
+    columnaNombre.innerHTML = nombre;
+  
+    const columnaMonto = nuevaFila.insertCell(1);
+    columnaMonto.innerHTML = monto;
+  
+    const columnaBoton = nuevaFila.insertCell(2);
+    const boton = document.createElement("button");
+    boton.classList.add("botonborrar", "vibrar");
+    boton.innerHTML = "🗑️";
+    boton.onclick = function () {
+      tabla.deleteRow(nuevaFila.rowIndex);
+      actualizarSaldo();
+    };
+    columnaBoton.appendChild(boton);
+  
     actualizarSaldo();
-  };
-  columnaBoton.appendChild(boton);
-
-  actualizarSaldo();
-}
+});
 
 // Función para crear un array con los objetos gasto y actualizar el saldo
 function actualizarSaldo() {
