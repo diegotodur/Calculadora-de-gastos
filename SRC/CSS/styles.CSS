@@ -75,15 +75,6 @@ hr {
   border: none;
 }
 
-#botonesfinales{
-  justify-content: center;
-  width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 4%;
-  padding: 1px;
-}
-
 .btn.btn-secondary{
   font-size: 13px;
 }
