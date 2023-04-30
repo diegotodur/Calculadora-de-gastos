@@ -1,4 +1,4 @@
-//ACTUALIZAR VALOR DE INGRESOS
+//Funcion que obtiene el monto de ingresos y lo copia en celda correspondiente de tabla2
 
 const actualizarBtn = document.getElementById('botonactualizar');
 
@@ -10,12 +10,3 @@ actualizarBtn.addEventListener('click', function() {
   presupuestoActual.textContent = `$${ingresos}`;
   actualizarSaldo()
 });
-
-//FUNCION SALDO
-const saldo = document.getElementById('saldo-actual');
-
-function actualizarSaldo(){
-  const ingresos = Number(document.getElementById('valoringresos').value);
-  saldo.textContent= `$${ingresos}`
-
-}

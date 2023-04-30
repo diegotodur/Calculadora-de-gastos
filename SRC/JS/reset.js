@@ -1,6 +1,5 @@
+//Funcion para restear valores, elimina todas las filas de tabla2 y valores numericos de tabla1
 const resetButton = document.getElementById("reset");
-
-resetButton.addEventListener("click", reset);
 
 function reset() {
     const table2 = document.getElementById("table2");
