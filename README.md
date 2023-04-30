@@ -1,7 +1,7 @@
 # Calculadora Presupuestaria
 
 
-![Main Page](https://raw.githubusercontent.com/itsmisce/presupuestoJS/blob/main/SRC/IMG/main_pagina.png)
+![Main Page](https://github.com/itsmisce/presupuestoJS/blob/main/SRC/IMG/main_pagina.png)
 
 
 
