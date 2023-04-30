@@ -1,5 +1,6 @@
 # Calculadora Presupuestaria
 
+Usando Javascript generamos una pagina que nos permite añadir un sueldo y detalle de gastos. Logrando manipular interactivamente todos estos parametros, permitiendo descargar un excel con nuestra informacion y resetear todos los valores ingresados.
 
 ![Main Page](https://github.com/itsmisce/presupuestoJS/blob/main/SRC/IMG/main_pagina.png)
 
