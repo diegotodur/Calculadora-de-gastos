@@ -13,7 +13,7 @@ function reset() {
     gastos = [];
   
     gastosActuales.value = "";
-    saldoActual.innerHTML = "";
-    presupuestoActual.innerHTML = "";
+    saldoActual.value = "";
+    presupuestoActual.value = "";
   }
   

@@ -23,7 +23,14 @@ botonAgregar.addEventListener('click', function() {
       actualizarSaldo();
     };
     columnaBoton.appendChild(boton);
-  
+   
+    //Limpia los input
+    const eliminarNombre = document.getElementById("nombre_gasto");
+    const eliminarMonto = document.getElementById("monto_gasto");
+
+    eliminarNombre.value = "";
+    eliminarMonto.value = "";
+
     actualizarSaldo();
 });
 
@@ -48,6 +55,6 @@ function actualizarSaldo() {
 
   document.getElementById("gastos-actuales").innerText = "$" + totalGastos.toLocaleString();
   document.getElementById("saldo-actual").innerText = "$" + saldo.toLocaleString();
-
+  
   return gastos;
 }
