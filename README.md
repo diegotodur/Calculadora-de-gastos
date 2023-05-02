@@ -8,12 +8,12 @@ Usando Javascript generamos una pagina que nos permite añadir un sueldo y detal
 
 ## Construido con 🛠️
 
-* [Javascript]
-* [Boostrap]
-* [Jquery]
+* [Javascript] (https://www.javascript.com/)
+* [Boostrap] (https://getbootstrap.com/)
+* [Jquery] (https://jquery.com/)
 * [CSS]
 * [HTML]
-* [sheetsJS]
+* [sheetsJS] (https://sheetjs.com/)
 
 
 ## Version 📌
