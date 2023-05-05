@@ -29,7 +29,7 @@ actualizarBtn.addEventListener('click', function() {
 const botonAgregar = document.getElementById('agregar_gasto');
 
 botonAgregar.addEventListener('click', function() {
-  const nombre = document.getElementById("nombre_gasto").value;
+  const nombre = document.getElementById("nombre_gasto").value.trim();
   const monto = document.getElementById("monto_gasto").value;
 
   if (nombre !=="" && monto !=="" ) {
