@@ -18,13 +18,15 @@ actualizarBtn.addEventListener('click', function() {
     sueldoerror.style.backgroundColor = '#ae2f126e'
     sueldoerror.placeholder= "Ingresa un monto"
     sueldoerror.style.animation = 'shake 0.8s'
-    sueldoerror.style.border = '#FF3333'
+    sueldoerror.style.border = '#ffffff'
+    sueldoerror.style.color = '#ffffff'
     setTimeout(function() {
         sueldoerror.style.backgroundColor = '#eeecec';
         sueldoerror.placeholder= "$999.999"
         sueldoerror.style.animation = 'none';
         sueldoerror.style.border = '0.5px solid #ffffff'
-      }, 3000);
+        sueldoerror.style.color = '#6c757d'
+      }, 2000);
   }
 });
 
@@ -71,12 +73,14 @@ botonAgregar.addEventListener('click', function() {
       nombreerror.placeholder= "Ingresa un nombre"
       nombreerror.style.animation = 'shake 0.8s'
       nombreerror.style.border = '#FF3333'
+      nombreerror.style.color = '#ffffff'
       setTimeout(function() {
         nombreerror.style.backgroundColor = '#eeecec';
         nombreerror.placeholder= "Nombre"
         nombreerror.style.animation = 'none';
         nombreerror.style.border = '0.5px solid #ffffff'
-      }, 3000);
+        nombreerror.style.color = '#6c757d'
+      }, 2000);
     }
     if (monto === ""){
       const montoerror = document.getElementById("monto_gasto");
@@ -84,13 +88,14 @@ botonAgregar.addEventListener('click', function() {
       montoerror.placeholder= "Ingresa un monto"
       montoerror.style.animation = 'shake 0.8s'
       montoerror.style.border = '#FF3333'
+      montoerror.style.color = '#ffffff'
       setTimeout(function() {
         montoerror.style.backgroundColor = '#eeecec';
         montoerror.placeholder= "Monto"
         montoerror.style.animation = 'none';
         montoerror.style.border = '0.5px solid #ffffff'
-
-      }, 3000);
+        montoerror.style.color = '#6c757d'
+      }, 2000);
     }
   
     
