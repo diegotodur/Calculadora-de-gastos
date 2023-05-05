@@ -5,12 +5,23 @@ contacto = "github.com/itsmisce | linkedin.com/diegotorresduran | twitter.com/mi
 const actualizarBtn = document.getElementById('botonactualizar');
 
 actualizarBtn.addEventListener('click', function() {
+
   const ingresos = Number(document.getElementById('valoringresos').value);
   
-  const presupuestoActual = document.getElementById('presupuesto-actual');
+  if (ingresos !==0 && ingresos !=="" ){
+    const presupuestoActual = document.getElementById('presupuesto-actual');
   
-  presupuestoActual.textContent = `$${ingresos}`;
-  actualizarSaldo()
+    presupuestoActual.textContent = `$${ingresos}`;
+    actualizarSaldo()
+  } else {
+    const sueldoerror = document.getElementById("valoringresos");
+    sueldoerror.style.backgroundColor = '#ae2f126e'
+    sueldoerror.placeholder= "Ingresa un monto"
+    setTimeout(function() {
+        sueldoerror.style.backgroundColor = '#eeecec';
+        sueldoerror.placeholder= "$999.999"
+      }, 3000);
+  }
 });
 
 
@@ -21,6 +32,7 @@ botonAgregar.addEventListener('click', function() {
   const nombre = document.getElementById("nombre_gasto").value;
   const monto = document.getElementById("monto_gasto").value;
 
+  if (nombre !=="" && monto !=="" ) {
     const tabla = document.getElementById("table2");
     const nuevaFila = tabla.insertRow(-1);
   
@@ -48,6 +60,27 @@ botonAgregar.addEventListener('click', function() {
     eliminarMonto.value = "";
 
     actualizarSaldo();
+  } else{
+    if (nombre === "") {
+      const nombreerror = document.getElementById("nombre_gasto");
+      nombreerror.style.backgroundColor = '#ae2f126e'
+      nombreerror.placeholder= "Ingresa un nombre"
+      setTimeout(function() {
+        nombreerror.style.backgroundColor = '#eeecec';
+        nombreerror.placeholder= "Nombre"
+      }, 3000);
+    }
+    if (monto === ""){
+      const montoerror = document.getElementById("monto_gasto");
+      montoerror.style.backgroundColor = '#ae2f126e';
+      montoerror.placeholder= "Ingresa un monto"
+      setTimeout(function() {
+        montoerror.style.backgroundColor = '#eeecec';
+        montoerror.placeholder= "Monto"
+      }, 3000);
+    }
+  }
+    
 });
 
 // Función para crear un array con los objetos gasto y actualizar el saldo
