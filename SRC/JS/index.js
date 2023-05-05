@@ -64,7 +64,7 @@ botonAgregar.addEventListener('click', function() {
     eliminarMonto.value = "";
 
     actualizarSaldo();
-  } else{
+  } 
     if (nombre === "") {
       const nombreerror = document.getElementById("nombre_gasto");
       nombreerror.style.backgroundColor = '#ae2f126e'
@@ -87,11 +87,12 @@ botonAgregar.addEventListener('click', function() {
       setTimeout(function() {
         montoerror.style.backgroundColor = '#eeecec';
         montoerror.placeholder= "Monto"
+        montoerror.style.animation = 'none';
         montoerror.style.border = '0.5px solid #ffffff'
 
       }, 3000);
     }
-  }
+  
     
 });
 
