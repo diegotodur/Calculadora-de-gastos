@@ -12,98 +12,93 @@
 	<link rel="shortcut icon" href="./SRC/IMG/calculadora.png" type="image/x-icon">
 	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
-	<script defer src="./SRC/JS/table2excel.js"></script>
-	<script defer src="./SRC/JS/actualizarSaldo.js"></script>
-	<script defer src="./SRC/JS/agregarGasto.js"></script>
-	<script defer src="./SRC/JS/reset.js"></script>
-    <script defer src="./SRC/JS/numericos.js"></script>
+	<script defer src="./SRC/JS/index.js"></script>
 	<title>Calculadora</title>
 	
 </head>
 <body >
-	<div class="contenedor fw-semibold">
-		<div class="tarjetas">
-			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-				<div class="textos">
-					<h3>Ingresos</h3> <br>
-					<form id="presupuesto"class="presupuesto">
-						<label id = "ingresoslabel" for="presupuesto"></label> <br>
-						<input class="ingresos validarNumero" maxlength="8" type="number" placeholder="$999.999" id="valoringresos" onfocus="this.value=''" oninput="validarNumeros()" required>  <br> <br> <br>
-						<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
-					</form>
-				</div>
-			</div>
 
-			<div>
+	<main>
+		<div class="contenedor fw-semibold">
+			<div class="tarjetas">
 				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-					<h3 class="textos" style="text-align: center;">Presupuesto</h3>
-					<hr>
-					<table id="table1" class="table table-hover">
-						<tr>
-						  <th>Ingresos</th>
-						  <th>Gastos</th>
-						  <th>Saldo</th> 
-						</tr>
-						<tr>
-						  <td id="presupuesto-actual">$0</td> 
-						  <td id="gastos-actuales">$0</td>
-						  <td id="saldo-actual">$0</td>
-						</tr>
-					</table> 
+					<div class="textos">
+						<h3>Ingresos</h3> <br>
+						<form id="presupuesto"class="presupuesto">
+							<label id = "ingresoslabel" for="presupuesto"></label> <br>
+							<input class="ingresos validarNumero" maxlength="8" type="number" placeholder="$999.999" id="valoringresos" required>  <br> <br> <br>
+							<button type="button" class="btn btn-secondary" id="botonactualizar">Actualizar</button>
+						</form>
+					</div>
 				</div>
-			</div>
-
-			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-				<div class="textos">
-					<h3>Gastos</h3>
-					<form class="ingresogastos">
-						<label id = "ingresoslabel" for="nombre-gasto"></label>
-						<input class="ingresos" maxlength="10" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''" required> <br>
-						<label id = "ingresoslabel" for="monto-gasto"></label> 
-						<input class="ingresos validarNumero" maxlength="8" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''" required> <br> <br> 
-						<button type="button"  class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
-					  </form>
+	
+				<div>
+					<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+						<h3 class="textos" style="text-align: center;">Presupuesto</h3>
+						<hr>
+						<table id="table1" class="table table-hover">
+							<tr>
+							  <th>Ingresos</th>
+							  <th>Gastos</th>
+							  <th>Saldo</th> 
+							</tr>
+							<tr>
+							  <td id="presupuesto-actual">$0</td> 
+							  <td id="gastos-actuales">$0</td>
+							  <td id="saldo-actual">$0</td>
+							</tr>
+						</table> 
+					</div>
 				</div>
-			</div>
-
-			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-				<div class="textos">
-					<h3>Excel</h3>
-                    <img src="./SRC/IMG/excelbw.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;" oncontextmenu="return false"> <br> <br> <br>
-					<button id="descargardata" onclick="table2excel()" class="btn btn-secondary">Descargar</button>
-					
+	
+				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<div class="textos">
+						<h3>Gastos</h3>
+						<form class="ingresogastos">
+							<label id = "ingresoslabel" for="nombre-gasto"></label>
+							<input class="ingresos" maxlength="10" type="text" id="nombre_gasto" placeholder="Nombre" onfocus="this.value=''" required> <br>
+							<label id = "ingresoslabel" for="monto-gasto"></label> 
+							<input class="ingresos validarNumero" maxlength="8" type="number" id="monto_gasto" placeholder="Monto" onfocus="this.value=''" required> <br> <br> 
+							<button type="button"  class="btn btn-secondary" id="agregar_gasto">Agregar</button> <br>
+						  </form>
+					</div>
 				</div>
-			</div>
-
-			<div >
-				<div class="textos listagastos card shadow-sm p-3 mb-5" style="background-color: #dbdcde">
-					<h3 style="text-align: center;" class="textos">Lista</h3>
-					<hr>
-					<table id="table2" class="table table-hover">
-						<tr>
-						  <th>Gasto</th>
-						  <th>Valor</th>
-						  <th>🗑️</th>
-						</tr>
-					  </table>
+	
+				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<div class="textos">
+						<h3>Excel</h3>
+						<img src="./SRC/IMG/excelbw.png" alt="excel" style="width: 100px; height: 100px; padding: 10px; margin: 10px;" oncontextmenu="return false"> <br> <br> <br>
+						<button id="descargardata" class="btn btn-secondary">Descargar</button>
+						
+					</div>
 				</div>
-			</div>
-
-			<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
-				<div class="textos">
-					<h3>Resetear</h3>
-					<img src="./SRC/IMG/documento.png" alt="reset" style="width: 100px; height: 100px; padding: 10px; margin: 10px;" oncontextmenu="return false"> <br> <br> <br>
-					<button id="reset" class="btn btn-secondary">Resetear</button>
+	
+				<div >
+					<div class="textos listagastos card shadow-sm p-3 mb-5" style="background-color: #dbdcde">
+						<h3 style="text-align: center;" class="textos">Lista</h3>
+						<hr>
+						<table id="table2" class="table table-hover">
+							<tr>
+							  <th>Gasto</th>
+							  <th>Valor</th>
+							  <th>🗑️</th>
+							</tr>
+						  </table>
+					</div>
 				</div>
+	
+				<div class="card shadow-sm p-3 mb-5" style="background-color: #dbdcde;">
+					<div class="textos">
+						<h3>Resetear</h3>
+						<img src="./SRC/IMG/documento.png" alt="reset" style="width: 100px; height: 100px; padding: 10px; margin: 10px;" oncontextmenu="return false"> <br> <br> <br>
+						<button id="reset" class="btn btn-secondary">Resetear</button>
+					</div>
+				</div>
+				
 			</div>
-			
-		</div>
-	</div>
-
-	<div id="botonesfinales">
-
-	</div>
-
+	
+	</main>
+	
 	<footer>
         <div class="footer ">
           <ul>
