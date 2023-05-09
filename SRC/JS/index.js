@@ -1,5 +1,30 @@
 console.log("Bienvenido/a! escribe <contacto> en caso de requerirlo.")
 contacto = "github.com/itsmisce | linkedin.com/diegotorresduran | twitter.com/miscelanneo"
+
+// Función para crear un array con los objetos gasto y actualizar el saldo
+function actualizarSaldo() {
+  const tabla = document.getElementById("table2");
+  const filas = tabla.getElementsByTagName("tr");
+  const gastos = [];
+
+  for (let i = 1; i < filas.length; i++) {
+    const fila = filas[i];
+    const nombre = fila.cells[0].innerText;
+    const monto = Number(fila.cells[1].innerText);
+    gastos.push({ nombre: nombre, monto: monto });
+  }
+
+  const totalGastos = gastos.reduce((acumulador, gasto) => acumulador + gasto.monto, 0);
+
+  const presupuesto = Number(document.getElementById("presupuesto-actual").innerText.replace("$", ""));
+  const saldo = presupuesto - totalGastos;
+
+  document.getElementById("gastos-actuales").innerText = "$" + totalGastos.toLocaleString();
+  document.getElementById("saldo-actual").innerText = "$" + saldo.toLocaleString();
+  
+  return gastos;
+}
+
 //Funcion que obtiene el monto de ingresos y lo copia en celda correspondiente de tabla2
 
 const actualizarBtn = document.getElementById('botonactualizar');
@@ -101,42 +126,6 @@ botonAgregar.addEventListener('click', function() {
     
 });
 
-// Función para crear un array con los objetos gasto y actualizar el saldo
-function actualizarSaldo() {
-  const tabla = document.getElementById("table2");
-  const filas = tabla.getElementsByTagName("tr");
-  const gastos = [];
-
-  for (let i = 1; i < filas.length; i++) {
-    const fila = filas[i];
-    const nombre = fila.cells[0].innerText;
-    const monto = Number(fila.cells[1].innerText);
-    gastos.push({ nombre: nombre, monto: monto });
-  }
-
-  const totalGastos = gastos.reduce((acumulador, gasto) => acumulador + gasto.monto, 0);
-
-  const presupuesto = Number(document.getElementById("presupuesto-actual").innerText.replace("$", ""));
-  const saldo = presupuesto - totalGastos;
-
-  document.getElementById("gastos-actuales").innerText = "$" + totalGastos.toLocaleString();
-  document.getElementById("saldo-actual").innerText = "$" + saldo.toLocaleString();
-  
-  return gastos;
-}
-
-//Funcion para borrar una fila en especifica de tabla2
-const botonesBorrar = document.querySelectorAll('.botonborrar');
-
-botonesBorrar.forEach(boton => {
-  boton.addEventListener('click', () => {
-
-    const fila = boton.parentNode.parentNode;
-
-    fila.remove();
-  });
-});
-
 //Funcion que actua como validador de parametros numericos en inputs, bloquea la escritura de letras y simbolos
 jQuery(document).ready(function() {
   jQuery('.validarNumero').keypress(function(tecla) {
@@ -184,3 +173,15 @@ descargardata.addEventListener('click', function() {
 	
 	XLSX.writeFile(wb, 'calculadora.xlsx');
 })
+
+//Funcion para borrar una fila en especifica de tabla2
+const botonesBorrar = document.querySelectorAll('.botonborrar');
+
+botonesBorrar.forEach(boton => {
+  boton.addEventListener('click', () => {
+
+    const fila = boton.parentNode.parentNode;
+
+    fila.remove();
+  });
+});
